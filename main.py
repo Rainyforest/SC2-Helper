@@ -89,7 +89,7 @@ class UIMain:
             if self.build_iter_idx < len(self.player.build_order):
                 now = time.time()
                 curr_build = self.player.build_order[self.build_iter_idx]
-                if now >= self.start_time + float(curr_build.time_in_seconds) * (5/6) - self.preread_offset:
+                if now >= self.start_time + float(curr_build.time_in_seconds) * (6/5) - self.preread_offset:
                     utils.announce_build(curr_build)
                     self.build_iter_idx += 1
             else: self.broadcasting = False
